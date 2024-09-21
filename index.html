@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap'); /* Nueva fuente */
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('img/NOCHE.jpg') no-repeat center center/cover;
+            font-family: 'Roboto', sans-serif; /* Aplicar nueva fuente */
+            overflow: hidden;
+        }
+
+        h1, h2 {
+            color: black;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 6vw; /* Tamaño más pequeño */
+            margin: 0;
+            animation: neonText 5s infinite, moveText 2s infinite; /* Agregar animación de movimiento */
+        }
+
+        h2 {
+            font-size: 3vw; /* Tamaño más pequeño */
+            margin-top: 20px;
+            animation: neonPulse 2s infinite, moveText 2s infinite; /* Agregar animación de movimiento */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            font-size: 3vw;
+            padding: 20px 50px;
+            margin-top: 30px;
+            background: linear-gradient(45deg, #ff66b2, #ffcc00); /* Efecto de degradado */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(255, 102, 178, 0.6), 0 0 30px rgba(255, 204, 0, 0.6);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        button:hover::before {
+            opacity: 1;
+            width: 400%;
+            height: 400%;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #ff66b2, #ffcc00);
+            color: white;
+            box-shadow: 0 0 30px rgba(255, 102, 178, 0.8), 0 0 40px rgba(255, 204, 0, 0.8);
+            transform: scale(1.1);
+        }
+
+        @keyframes neonText {
+            0%, 100% {
+                text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00;
+                color: black;
+            }
+            50% {
+                text-shadow: 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 25px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00;
+                color: #333;
+            }
+        }
+
+        @keyframes neonPulse {
+            0%, 100% {
+                text-shadow: 0 0 3px #ffd700, 0 0 6px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+            }
+            50% {
+                text-shadow: 0 0 6px #aa9102, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00;
+            }
+        }
+
+        @keyframes moveText {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐝💕MI REYNA ABEJITA🐝💕</h1>
+        <h2>💕Tengo un regalo para ti💕🌻</h2>
+        <button onclick="window.location.href='rosas.html'"> Ver Sorpresa!!!🌻💛</button>
+    </div>
+</body>
+</html>
